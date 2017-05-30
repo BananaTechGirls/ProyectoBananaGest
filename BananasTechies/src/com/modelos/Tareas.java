@@ -3,7 +3,7 @@ package com.modelos;
 import java.util.Date;
 
 public class Tareas {
-	int id;
+	String idTarea;
 	String titulo;
 	String status;
 	boolean activo;
@@ -15,8 +15,8 @@ public class Tareas {
 	String prioridad;
 	Usuarios responsable;
 	
-	public Tareas(int id, String titulo, String status, boolean activo, Date fechaDeInicio, Date fechaEstimadaFin, Date fechaDeFin, String descripcion, String notas, String prioridad, Usuarios responsable) {
-		this.id=id;
+	public Tareas(String idTarea, String titulo, String status, boolean activo, Date fechaDeInicio, Date fechaEstimadaFin, Date fechaDeFin, String descripcion, String notas, String prioridad, Usuarios responsable) {
+		this.idTarea=""+Math.random();
 		this.titulo=titulo;
 		this.status=status;
 		this.activo=activo;

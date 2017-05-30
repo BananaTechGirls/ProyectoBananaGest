@@ -7,7 +7,7 @@ import javafx.scene.media.VideoTrack;
 import sun.net.www.content.image.jpeg;
 
 public class Usuarios {
-	private String id;
+	private String userId;
 	private String nombre;
 	private String apellido;
 	private String email;
@@ -18,8 +18,8 @@ public class Usuarios {
 	private List<Tareas> tareasAsignados;
 	
 	
-	public Usuarios(String id, String nombre, String apellido, String email, String pass, jpeg imagen, VideoTrack video, List<Proyectos> proyectosAsignados, List<Tareas> tareasAsignados) {
-		this.id=""+Math.random();
+	public Usuarios(String userId, String nombre, String apellido, String email, String pass, jpeg imagen, VideoTrack video, List<Proyectos> proyectosAsignados, List<Tareas> tareasAsignados) {
+		this.userId=""+Math.random();
 		this.nombre=nombre;
 		this.apellido=apellido;
 		this.email=email;
@@ -29,18 +29,18 @@ public class Usuarios {
 		this.proyectosAsignados = proyectosAsignados;
 		this.tareasAsignados = tareasAsignados;
 		
-	};
+	}
 	
 	
 	
 	//getters y setters
 	
-	public String getId() {
-		return id;
+	public String getUserId() {
+		return userId;
 	}
 
-	public void setId(String id) {
-		this.id = id;
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
 
 	public String getNombre() {

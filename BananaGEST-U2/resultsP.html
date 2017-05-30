@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Banana GEST Resultado Busqueda de Proyectos</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+	<link rel="stylesheet" href="./style/bootstrap.css">
+	<link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+	<div class="container">
+		<header>
+			<nav class="navbar navbar-default menu">
+				<div class="row">			
+					<a class="navbar-brand" href="home.html">
+						<h1 class="logo">Banana GEST</h1>
+					</a>
+				</div>
+				<div class="row">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle burgerMenu" data-toggle="collapse" data-target="#myNavbar" aria-label="burgerMenu">
+							<span class="icon-bar burgerIcon"></span>
+							<span class="icon-bar burgerIcon"></span>
+							<span class="icon-bar burgerIcon"></span>
+						</button>
+						
+					</div>
+					<div class="collapse navbar-collapse submenu" id="myNavbar">
+						<ul class="nav navbar-nav navList navbar-right">
+							<li><a class="navItems" href="home.html">Proyectos</a></li>
+							<li><a class="navItems" href="taskList.html">Tareas</a></li>
+							<li id="profileBtn"><a class="navItems glyphicon glyphicon-user" href="profile.html"><span class="profile">Perfil</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<section class="container-fluid">
+			<ol class="breadcrumb">
+				<li><a href="home.html">Home</a></li>
+				<li><a href="searchP.html">Buscar Proyectos</a></li>
+				<li class="active">Resultado</li>
+			</ol>
+			<h1>Resultado de Busqueda de Proyectos</h1>
+			<div class="row">
+				<div class="buttons col-xs-12 col-sm-5 col-sm-offset-7 col-md-4 col-md-offset-7">
+					<a href="searchP.html" class="btn">Nueva Busqueda</a>
+					<a href="home.html" class="btn">Volver a Projectos</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="container-fluid">
+					<div class="box1 linkBox col-xs-12 col-sm-6" id="project1">
+						<a href="project.html" aria-label="project">
+							<ul class="infoPro col-xs-12 col-sm-8">
+								<li class="col-xs-12">
+									<p>Titulo: 
+										<span>Proyecto 1</span>
+									</p>
+								</li>
+								<li class="col-xs-12">
+									<p>Fecha de Inicio: 
+										<span>00/00/00</span>
+									</p>
+								</li>
+								<li class="col-xs-12">
+									<p>Asignado a: 
+										<span>Jaimito</span>
+									</p>
+								</li>
+								<li class="col-xs-12">
+									<p>Status: 
+										<span>En desarrollo</span>
+									</p>
+								</li>
+								<li class="col-xs-12">
+									<button class="btn_del_Project glyphicon glyphicon-trash" data_Id="project1" aria-label="deleteProyect"></button>
+								</li>	
+							</ul>
+							<div class="panel panel-default col-xs-12 col-sm-4">
+									<div class="panel-heading">
+										<p class="panel-title">Tareas</p>
+									</div>
+									<div class="panel-body">
+										<ul class="taskList col-sm-12">
+											<li class="row" id="p1Task1R">
+												<div class="col-xs-6">
+													<a href="task.html">Tarea 1</a>
+												</div>
+												<div class="col-xs-6">
+													<button class="btn_del_Task glyphicon glyphicon-trash" aria-label="deleteTask" data_Id="p1Task1R"></button>
+												</div>
+											</li>
+											<li class="row" id="p1Task2R">
+												<div class="col-xs-6">
+													<a href="task.html">Tarea 2</a>
+												</div>
+												<div class="col-xs-6">
+													<button class="btn_del_Task glyphicon glyphicon-trash" aria-label="deleteTask" data_Id="p1Task2R"></button>
+												</div>
+											</li>
+											<li class="row" id="p1Task3R">
+												<div class="col-xs-6">
+													<a href="task.html">Tarea 3</a>
+												</div>
+												<div class="col-xs-6">
+													<button class="btn_del_Task glyphicon glyphicon-trash" aria-label="deleteTask" data_Id="p1Task3R"></button>
+												</div>
+											</li>
+											<li class="row" id="p1Task4R">
+												<div class="col-xs-6">
+													<a href="task.html">Tarea 4</a>
+												</div>
+												<div class="col-xs-6">
+													<button class="btn_del_Task glyphicon glyphicon-trash" aria-label="deleteTask" data_Id="p1Task4R"></button>
+												</div>
+											</li>
+											<li class="row" id="p1Task5R">
+												<div class="col-xs-6">
+													<a href="task.html">Tarea 5</a>
+												</div>
+												<div class="col-xs-6">
+													<button class="btn_del_Task glyphicon glyphicon-trash" aria-label="deleteTask" data_Id="p1Task5R"></button>
+												</div>
+											</li>
+											<li class="row" id="p1Task6R">
+												<div class="col-xs-6">
+													<a href="task.html">Tarea 6</a>
+												</div>
+												<div class="col-xs-6">
+													<button class="btn_del_Task glyphicon glyphicon-trash" aria-label="deleteTask" data_Id="p1Task6R"></button>
+												</div>
+											</li>
+										</ul>
+									</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+			
+		</section>
+		<footer>
+			<p class="rights col-xs-12 col-sm-6 col-sm-offset-3">©2017 <span class="techG">Tech Girls </span> All Rights Reserved.</p>
+		</footer>
+
+	</div>
+</body>
+<script src="./js/home.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</html>

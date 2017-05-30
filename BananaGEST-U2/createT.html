@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Banana GEST Crear Tarea</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+	<link rel="stylesheet" href="./style/bootstrap.css">
+	<link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+	<div class="container">
+		<header>
+			<nav class="navbar navbar-default menu">
+				<div class="row">			
+					<a class="navbar-brand" href="home.html">
+						<h1 class="logo">Banana GEST</h1>
+					</a>
+				</div>
+				<div class="row">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle burgerMenu" data-toggle="collapse" data-target="#myNavbar" aria-label="burgerMenu">
+							<span class="icon-bar burgerIcon"></span>
+							<span class="icon-bar burgerIcon"></span>
+							<span class="icon-bar burgerIcon"></span>
+						</button>
+					</div>
+					<div class="collapse navbar-collapse submenu" id="myNavbar">
+						<ul class="nav navbar-nav navList navbar-right">
+							<li><a class="navItems" href="home.html">Proyectos</a></li>
+							<li><a class="navItems" href="taskList.html">Tareas</a></li>
+							<li id="profileBtn"><a class="navItems glyphicon glyphicon-user" href="profile.html"><span class="profile">Perfil</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<section class="container-fluid">
+			<ol class="breadcrumb">
+				<li><a href="home.html">Home</a></li>
+				<li><a href="taskList.html">Tareas</a></li>
+				<li class="active">Crear Tarea</li>
+			</ol>
+			<div class="pageTitle">
+				<h1>Crear Nueva Tarea</h1>
+			</div>
+			<div class="row">
+				<div class="buttons col-xs-12 col-sm-6 col-sm-offset-6">
+					<a href="home.html" class="btn">Cancelar</a>
+					<a href="task.html" class="btn" id="btn_create_task">Crear</a>
+				</div>
+			</div>
+			<form action="task.html"  method="get" id="createTForm" novalidate>
+				<div class="col-xs-12 col-sm-6">
+					<div class="form-group">
+					    <label for="taskTitle">Título de la Tarea</label>
+					    <input class="form-control" type="text" name="title" placeholder="Título de la Tarea" aria-describedby="basic-addon1" 
+					     id="taskTitle" minlength="6" pattern="[a-z A-Z 0-9]" required>
+                        <div class="mensajes_error_createT">
+							<div id="taskTitle[valueMissing]" class="errorP">El campo Título de la Tarea debe tener valor.</div>
+							<div id="taskTitle[patternMismatch]" class="errorP">El campo Título de la Tarea debe tener como minimo 6 caracteres.</div>
+							<div id="taskTitle[typeMismatch]" class="errorP">Introduzca los datos correctos</div>
+						</div>
+					</div>
+  					<div class="form-group">
+    					<label for="startDate">Fecha de Inicio</label>
+    					<input class="form-control" type="date" name="date" placeholder="Start Date" aria-describedby="basic-addon1" id="startDate" required >
+    					<div class="mensajes_error_createT">
+							<div id="startDate[valueMissing]" class="errorP">El campo Fecha de inicio proyecto debe tener valor.</div>
+							<div id="startDate[typeMismatch]" class="errorP">Fecha de inicio incorrecta.</div>
+						</div>
+					</div>
+					<div class="form-group">
+    					<label for="endDate">Fecha de fin</label>
+    					<input class="form-control" type="date" name="date" placeholder="End Date" aria-describedby="basic-addon1"  id="endDate">
+    					<div class="mensajes_error_createT">
+							<div id="endDate[valueMissing]" class="errorP">Fecha de fin del proyecto.</div>
+							<div id="endDate[typeMismatch]" class="errorP">Fecha de fin incorrecta.</div>
+						</div>
+					</div>
+					<div class="inCharge" >
+						<label for="inChangeControl">Asignar persona Responsable</label>
+						<select class="form-control" id="inChangeControl" required >
+							<option value="">- Elegir una opción -</option>
+							<option>David Romero</option>
+							<option>Maria Ruíz</option>
+							<option>Andrés Blum</option>
+							<option>Karla Garcia</option>
+							<option>Zhanna Andrade</option>
+							<option>Carlos Peréz</option>
+							<option>Karla Garcia</option>
+							<option>Maria Ruíz</option>
+							<option>Andrés Blum</option>
+							<option>Karla Garcia</option>
+						</select>
+						<div class="mensajes_error_createT">
+							<div id="inChangeControl[valueMissing]" class="errorP">Escoge un nombre .</div>
+							<div id="inChangeControl[typeMismatch]" class="errorP"> Error campo vacio.</div>
+						</div>
+					</div>
+					<div class="fileForm col-xs-12">
+						<div class="form-group">
+	    					<label for="addFile">Añade un Archivo</label>
+	    					<input type="file" id="addFile" name="file" placeholder="Selecciona un Archivo" value="file">
+	    					<p class="help-block">Puedes añadir docs o imagenes.</p>
+						</div>
+					</div>	
+				</div>
+				<div class="col-xs-12 col-sm-6">
+					<div class="projectTitle">
+						<label for="proyectFormid">Titulo del Proyecto</label>
+						<select class="form-control" id="proyectFormid" required >
+							<option value="">- Elegir una opción -</option>
+							<option>Proyecto 1</option>
+							<option>Proyecto 2</option>
+							<option>Proyecto 3</option>
+							<option>Proyecto 4</option>
+							<option>Proyecto 5</option>
+							<option>Proyecto 6</option>
+							<option>Proyecto 7</option>
+							<option>Proyecto 8</option>
+							<option>Proyecto 9</option>
+							<option>Proyecto 10</option>
+						</select>
+						<div class="mensajes_error_createT">
+							<div id="proyectFormid[valueMissing]" class="errorP">Escoge un proyecto.</div>
+							<div id="proyectFormid[typeMismatch]" class="errorP"> Error campo vacio.</div>
+						</div>
+					</div>
+					<div class="status">
+						<label for="statusId">Status</label>
+						<select class="form-control" id="statusId" required>
+							<option value="">- Elegir una opción -</option>
+							<option>Hecho</option>
+							<option>En Desarrollo</option>
+							<option>Feedback</option>
+							<option>Rechazado</option>
+						</select>
+							<div class="mensajes_error_createT">
+								<div id="statusId[valueMissing]" class="errorP">Escoge un nombre .</div>
+								<div id="statusId[typeMismatch]" class="errorP"> Error campo vacio.</div>
+							</div>
+					</div>
+					<div>
+						<div class="form-group">
+						    <label for="taskDescriptionId">Descripción de la Tarea</label>
+						    <textarea class="form-control" type="text" name="tDescription" placeholder="Descripción de la Tarea"  value="description" id="taskDescriptionId" minlength="6" maxlength="150" pattern="[a-z A-Z 0-9]" required></textarea>
+							<div class="mensajes_error_createT">
+								<div id="taskDescriptionId[valueMissing]" class="errorP">este campo debe tener valor</div>
+								<div id="taskDescriptionId[typeMismatch]" class="errorP"> Datos incorrectos</div>
+								<div id="taskDescriptionId[patternMismatch]" class="errorP"> Datos incorrectos</div>
+							</div>
+						</div>	
+	  					<div class="form-group">
+	    					<label for="taskNotes">Notas y Comentarios</label>
+	    					<textarea class="form-control" type="text" name="Notes" placeholder="Notas y Comentarios" value="Notes" id="taskNotes"></textarea>
+						</div>
+					</div>
+				</div>
+			</form>
+		</section>
+		<footer class="col-xs-12">
+			<p class="rights col-xs-12 col-sm-6 col-sm-offset-3">©2017 <span class="techG">Tech Girls </span> All Rights Reserved.</p>
+		</footer>
+	</div>
+</body>
+<script src="./js/home.js"></script>
+<script src="./js/createTask.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Banana GEST Crear Proyecto</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+	<link rel="stylesheet" href="./style/bootstrap.css">
+	<link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+	<div class="container">
+		<header>
+			<nav class="navbar navbar-default menu">
+				<div class="row">			
+					<a class="navbar-brand" href="home.html">
+						<h1 class="logo">Banana GEST</h1>
+					</a>
+				</div>
+				<div class="row">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle burgerMenu" name="burgerMenu" data-toggle="collapse" data-target="#myNavbar" aria-label="burgerMenu">
+							<span class="icon-bar burgerIcon"></span>
+							<span class="icon-bar burgerIcon"></span>
+							<span class="icon-bar burgerIcon"></span>
+						</button>
+						
+					</div>
+					<div class="collapse navbar-collapse submenu" id="myNavbar">
+						<ul class="nav navbar-nav navList navbar-right">
+							<li><a class="navItems" href="home.html">Proyectos</a></li>
+							<li><a class="navItems" href="taskList.html">Tareas</a></li>
+							<li id="profileBtn"><a class="navItems glyphicon glyphicon-user" href="profile.html"><span class="profile">Perfil</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<section class="container-fluid">
+			<ol class="breadcrumb">
+				<li><a href="home.html">Home</a></li>
+				<li class="active">Crear Proyecto</li>
+			</ol>
+			<div class="pageTitle ">
+				<h1>Crear Nuevo Proyecto</h1>
+			</div>
+			<div class="row">
+				<div class="buttons col-xs-12 col-sm-4 col-sm-offset-8">
+					<a href="home.html" class="btn">Cancelar</a>
+					<a href="project.html" class="btn" id="btn_create_project">Crear</a>
+				</div>
+			</div>
+			<form action="Project.html"  method="get" id="createPForm" novalidate>
+				<article class="col-xs-12 col-sm-4">
+					<div>
+						<div class="form-group">
+						    <label for="projectTitleCP">Titulo del Proyecto</label>
+						    <input class="form-control" type="text" name="title" placeholder="Titulo del Proyecto" id="projectTitleCP" minlength="6" pattern="[a-z A-Z 0-9]" required>
+						    <div class="mensajes_error_createP">
+								<div id="projectTitleCP[valueMissing]" class="errorP">El campo Titulo del Proyecto debe tener valor.</div>
+								<div id="projectTitleCP[patternMismatch]" class="errorP">El campo Titulo del Proyecto debe tener como minimo 6 caracteres.</div>
+								<div id="projectTitleCP[typeMismatch]" class="errorP">Introduzca los datos correctos</div>
+							</div>
+						</div>
+		  				<div class="form-group ">
+		    				<label for="startDateCP">Fecha de Inicio</label>
+		    				<input class="form-control" type="date" name="date" placeholder="Start Date"  id="startDateCP" required>
+		    				<div class="mensajes_error_createP">
+								<div id="startDateCP[valueMissing]" class="errorP">El Campo Fecha de inicio proyecto debe tener valor.</div>
+								<div id="startDateCP[typeMismatch]" class="errorP">Fecha de inicio incorrecta.</div>
+							</div>
+						</div>
+					</div>
+					<div class="inCharge">
+						<label for="personaAsignadaCP">Asignar Persona Responsable</label>
+						<select class="form-control" id="personaAsignadaCP" required>
+							<option value="">- Elegir una opción -</option>
+							<option>David Romero</option>
+							<option>Maria Ruíz</option>
+							<option>Andrés Blum</option>
+							<option>Karla Garcia</option>
+							<option>Zhanna Andrade</option>
+							<option>Carlos Peréz</option>
+							<option>Karla Garcia</option>
+							<option>Maria Ruíz</option>
+							<option>Andrés Blum</option>
+							<option>Karla Garcia</option>
+						</select>
+						<div class="mensajes_error_createP">
+							<div id="personaAsignadaCP[valueMissing]" class="errorP">Escoge un nombre .
+							</div>
+						</div>			
+					</div>
+					<div class="status">
+						<label for="statusIdCP">Status</label>
+						<select class="form-control" id="statusIdCP" required>
+							<option value="">- Elegir una opción -</option>
+							<option>Hecho</option>
+							<option>En Desarrollo</option>
+							<option>Feedback</option>
+							<option>Rechazado</option>
+						</select>
+						<div class="mensajes_error_createP">
+							<div id="statusIdCP[valueMissing]" class="errorP">Escoge un Status .</div>
+							<div id="statusIdCP[typeMismatch]" class="errorP"> Error campo vacio.</div>
+						</div>
+					</div>
+				</article>
+				<article class="col-xs-12 col-sm-8">
+					<div>
+						<div class="form-group">
+						    <label for="projectDescriptionIdCP">Descripción del Proyecto</label>
+						    <textarea class="form-control" type="text" name="pDescription" placeholder="Descripción del Proyecto"  value="description" id="projectDescriptionIdCP" maxlength="150" pattern="[a-z A-Z 0-9]" required></textarea>
+						   	<div class="mensajes_error_createP">
+									<div id="projectDescriptionIdCP[valueMissing]" class="errorP">Campo requerido.</div>
+									<div id="projectDescriptionIdCP[typeMismatch]" class="errorP"> Error campo vacio.</div>
+							</div>
+						</div>
+	  					<div class="form-group">
+	    					<label for="projectNotesCP">Notas y comentarios</label>
+	    					<textarea class="form-control" type="text" name="Notes" placeholder="Notas y comentarios" value="Notes" id="projectNotesCP" maxlength="150" pattern="[a-z A-Z 0-9]" required></textarea>
+	    					<div class="mensajes_error_createP">
+									<div id="projectNotesCP[valueMissing]" class="errorP">Campo requerido .</div>
+									<div id="projectNotesCP[typeMismatch]" class="errorP"> Error campo vacio.</div>
+							</div>
+						</div>
+					</div>
+				</article>
+			</form>
+		</section>
+		<footer class="col-xs-12">
+			<p class="rights col-xs-12 col-sm-6 col-sm-offset-3">©2017 <span class="techG">Tech Girls </span> All Rights Reserved.</p>
+		</footer>
+	</div>
+</body>
+<script src="./js/home.js"></script>
+<script src="./js/createP2.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</html>

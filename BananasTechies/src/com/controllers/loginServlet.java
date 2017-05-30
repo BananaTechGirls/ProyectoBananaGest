@@ -20,7 +20,7 @@ public class loginServlet extends HttpServlet {
 		HttpSession misession= (HttpSession)request.getSession();
 		
 		if( misession.getAttribute("idUsuario")!=null ){
-			request.getRequestDispatcher("/lista_maquillajes").forward(request, response);
+			request.getRequestDispatcher("/lista_proyectos").forward(request, response);
 		}else{
 			RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
 			rd.forward(request, response);
@@ -29,13 +29,13 @@ public class loginServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String email = request.getParameter("email");
-		String contrasena = request.getParameter("password");
+		String password = request.getParameter("password");
 				
-		if( email.equals("pepe@e.es") && contrasena.equals("lucas") ){
+		if( email.equals("ricardo@r.es") && password.equals("ricardo","juana","luisa") ){
 			HttpSession misession= (HttpSession)request.getSession();
-			misession.setAttribute("idUsuario", "pepe@e.es");
+			misession.setAttribute("idUsuario", "ricardo@r.es","juana@j.es","luisa@l.es"  );
 			
-			request.getRequestDispatcher("/lista_maquillajes").forward(request, response);
+			request.getRequestDispatcher("/lista_proyectos").forward(request, response);
 		}else{
 			request.setAttribute("mierror", "Email y contraseña erroneos");
 			doGet(request, response);

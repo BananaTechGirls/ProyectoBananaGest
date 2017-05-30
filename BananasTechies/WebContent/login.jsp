@@ -1,12 +1,67 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+<!DOCTYPE html>
+<html lang="en">
+<c:set var="errorclass" value="${mierror?" errorP":""}" />
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banana GEST Login</title>
+<link href="https://fonts.googleapis.com/css?family=Rock+Salt"
+	rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700"
+	rel="stylesheet">
+<link rel="stylesheet" href="css/login.css">
+
 </head>
 <body>
+	<div class="box1">
+		<header>
+			<h1>Banana GEST</h1>
+			<h2>Log In</h2>
+		</header>
 
+		<section>
+			<c:if test="${not empty mierror}">
+				<div class="alert alert-danger">${mierror}</div>
+			</c:if>
+
+			<form action="home.html" method="post" id="loginForm" novalidate>
+				<div>
+
+					<label for="email">Email: </label> <input type="email" name="Email"
+						id="email" placeholder="email@ejemplo.com" required>
+					<div class="mensajes_error">
+						<div id="email[valueMissing]" class="${errorclass}">Introduzca
+							sus datos.</div>
+						<div id="email[typeMismatch]" class="${errorclass}">El
+							formato no se corresponde con un email.</div>
+					</div>
+				</div>
+				<div>
+					<label for="pass">Password: </label> <input type="password"
+						name="Password" id="pass" placeholder="password" minlength="6"
+						pattern="[a-z 0-9]*" required>
+					<div class="mensajes_error">
+						<div id="pass[valueMissing]" class="${errorclass}">Introduzca
+							sus datos.</div>
+						<div id="pass[tooShort]" class="${errorclass}">El password
+							debe contener como minimo 6 caracteres.</div>
+					</div>
+				</div>
+				<div>
+					<input class="btnLogin" type="submit" form="loginForm"
+						value="Login" id="btnLoginId">
+				</div>
+			</form>
+			<a href="forgotPass.html">Has olvidado tu Password?</a>
+		</section>
+	</div>
 </body>
+<!-- <script src="./js/login.js"></script> -->
+<script src="js/login01.js"></script>
+
 </html>

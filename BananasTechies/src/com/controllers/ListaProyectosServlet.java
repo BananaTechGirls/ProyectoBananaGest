@@ -25,13 +25,27 @@ public class ListaProyectosServlet extends HttpServlet {
 		
 		if( misession.getAttribute("userId")!=null ){
 			Proyecto[] listaDeProyectosRicardo = {
-					new Proyecto(1, "titulo", new Usuario(1, "Ricardo", "Gere"), parseDate("2017-06-01"), "En Progreso", true),
-					new Proyecto(2, "titulo", new Usuario(2, "Juana", "Arco"), parseDate("2017-09-17"), "activo", true),
-					new Proyecto(3, "titulo", new Usuario(1, "Luis", "Miguel"), parseDate("2017-06-01"), "activo", true)
+					new Proyecto(1, "Proyecto 1", new Usuario(1, "Ricardo", "Gere"), parseDate("2017-06-01"), "En Progreso", true),
+					new Proyecto(2, "Proyecto 2", new Usuario(1, "Ricardo", "Gere"), parseDate("2017-09-17"), "Pendiente hacer", false),
+					new Proyecto(3, "Proyecto 3", new Usuario(1, "Ricardo", "Gere"), parseDate("2017-06-01"), "En progreso", true)
 					
-			};//crear 3 listas de proyectos
+			};
+			Proyecto[] listaDeProyectosJuana = {
+					new Proyecto(4, "Proyecto 4", new Usuario(2, "Juana", "Arco"), parseDate("2017-07-01"), "En Progreso", true),
+					new Proyecto(5, "Proyecto 5", new Usuario(2, "Juana", "Arco"), parseDate("2017-10-17"), "Pendiente hacer", false),
+					new Proyecto(6, "Proyecto 6", new Usuario(2, "Juana", "Arco"), parseDate("2017-03-01"), "Pendiente hacer", false)
+					
+			};
+			Proyecto[] listaDeProyectosLuis = {
+					new Proyecto(7, "Proyecto 7", new Usuario(3, "Luis", "Fonzi"), parseDate("2017-11-01"), "Pendiente hacer", false),
+					new Proyecto(8, "Proyecto 8", new Usuario(3, "Luis", "Fonzi"), parseDate("2017-02-17"), "En Progreso", true),
+					new Proyecto(9, "Proyecto 9", new Usuario(3, "Luis", "Fonzi"), parseDate("2017-08-01"), "En Progreso", true)
+					
+			};
 			
 			request.setAttribute("listaProyectosAMostrar", listaDeProyectosRicardo);
+			request.setAttribute("listaProyectosAMostrar", listaDeProyectosJuana);
+			request.setAttribute("listaProyectosAMostrar", listaDeProyectosLuis);
 			
 			request.getRequestDispatcher("plantilla_listaProyectos.jsp").forward(request, response);
 		}else{

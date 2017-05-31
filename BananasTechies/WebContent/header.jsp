@@ -1,14 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html lang="es">
-<jsp:include page="head.jsp"></jsp:include>
-
 <header>
 	<nav class="navbar navbar-default menu">
 		<div class="row">
-			<a class="navbar-brand" href="home.html">
-				<h1 class="logo">Banana GEST</h1>
+			<a class="navbar-brand" href="home.html"> <span class="logo">Banana
+					GEST</span>
 			</a>
 		</div>
 		<div class="row">
@@ -37,4 +31,3 @@
 	</nav>
 </header>
 
-</html>

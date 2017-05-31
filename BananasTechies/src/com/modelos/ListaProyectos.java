@@ -14,22 +14,22 @@ public class ListaProyectos {
 	}
 
 	public boolean almacenarProyectos(Proyectos unProyectos) {
-		this.losProyectos.put(unProyectos.getCodigo(), unProyectos);
+		this.losProyectos.put(unProyectos.getIdProyectos(), unProyectos);
 		return true;
 	}
 
-	public Proyectos retirar(String unCodigo) {
-		if (this.losProyectos != null && unCodigo.trim() != "") {
-			Proyectos elProyectosABorrar = this.losProyectos.get(unCodigo);
-			this.losProyectos.remove(unCodigo);
+	public Proyectos borrar(String idProyectos) {
+		if (this.losProyectos != null && idProyectos.trim() != "") {
+			Proyectos elProyectosABorrar = this.losProyectos.get(idProyectos);
+			this.losProyectos.remove(idProyectos);
 			return elProyectosABorrar;
 		} else
 			return null;
 	}
 
-	public void muestraLosCosmeticos() {
-		for(Map.Entry m : this.losProyectos.entrySet() ){
-			System.out.println(m.getKey()+" /�"+ m.getValue() +"�/ "+ ((Proyectos)m.getValue()).getMarca() );
+	public void muestraLosProyectos() {
+		for(Map.Entry p : this.losProyectos.entrySet() ){
+			System.out.println(p.getKey()+" /�"+ p.getValue() +"�/ "+ ((Proyectos)p.getValue()).getTitulo() );
 		}
 	}
 

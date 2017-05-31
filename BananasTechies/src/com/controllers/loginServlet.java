@@ -1,8 +1,7 @@
 package com.controllers;
 
 import java.io.IOException;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,7 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
+import com.modelos.Usuarios;
 @WebServlet("/login")
 public class loginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -31,13 +30,20 @@ public class loginServlet extends HttpServlet {
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
 				
-		if( email.equals("ricardo@r.es") && password.equals("ricardo","juana","luisa") ){
+		if( email.equals("ricardo@r.es") && password.equals("ricardo") ){
 			HttpSession misession= (HttpSession)request.getSession();
-			misession.setAttribute("idUsuario", "ricardo@r.es","juana@j.es","luisa@l.es"  );
-			
+			misession.setAttribute("idUsuario", "ricardo@r.es");
+			request.getRequestDispatcher("/lista_proyectos").forward(request, response);
+		}else if( email.equals("juana@j.es") && password.equals("juana") ){
+			HttpSession misession= (HttpSession)request.getSession();
+			misession.setAttribute("idUsuario", "juana@j.es");
+			request.getRequestDispatcher("/lista_proyectos").forward(request, response);
+		}else if( email.equals("luis@l.es") && password.equals("luis") ){
+			HttpSession misession= (HttpSession)request.getSession();
+			misession.setAttribute("idUsuario", "luis@l.es");
 			request.getRequestDispatcher("/lista_proyectos").forward(request, response);
 		}else{
-			request.setAttribute("mierror", "Email y contraseña erroneos");
+			request.setAttribute("mierror", "Email y contraseï¿½a erroneos");
 			doGet(request, response);
 		}
 		

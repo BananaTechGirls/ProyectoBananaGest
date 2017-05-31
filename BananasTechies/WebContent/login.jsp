@@ -3,8 +3,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <!DOCTYPE html>
-<html lang="en">
-<c:set var="errorclass" value="${mierror?" errorP":""}" />
+<html lang="es">
+<c:set var="errorclass" value='${mierror?"errorP":""}' />
 
 <head>
 <meta charset="UTF-8">
@@ -32,8 +32,8 @@
 			<form action="home.html" method="post" id="loginForm" novalidate>
 				<div>
 
-					<label for="email">Email: </label> <input type="email" name="Email"
-						id="email" placeholder="email@ejemplo.com" required>
+					<label for="email">Email: </label> 
+					<input type="email" name="Email" id="email" placeholder="email@ejemplo.com" required>
 					<div class="mensajes_error">
 						<div id="email[valueMissing]" class="${errorclass}">Introduzca
 							sus datos.</div>
@@ -42,8 +42,8 @@
 					</div>
 				</div>
 				<div>
-					<label for="pass">Password: </label> <input type="password"
-						name="Password" id="pass" placeholder="password" minlength="6"
+					<label for="pass">Password: </label> 
+					<input type="password" name="Password" id="pass" placeholder="password" minlength="6"
 						pattern="[a-z 0-9]*" required>
 					<div class="mensajes_error">
 						<div id="pass[valueMissing]" class="${errorclass}">Introduzca

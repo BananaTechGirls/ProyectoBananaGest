@@ -23,26 +23,24 @@ public class ListaProyectosServlet extends HttpServlet {
 		HttpSession misession= (HttpSession)request.getSession();
 		
 		if( misession.getAttribute("idUsuario")!=null ){
-			Proyectos[] listaMaquillajes = {
-					new Proyectos(idProyectos,String titulo,Usuarios responsable,Date fechaDeInicio,String status, boolean progreso),
+			Proyectos[] listaDeProyectos = {
+					new Proyectos(String idProyectos,String titulo,Usuarios responsable,Date fechaDeInicio,String status, boolean progreso),
 					new Proyectos(String idProyectos,String titulo,Usuarios responsable,Date fechaDeInicio,String status, boolean progreso),
 					new Proyectos(String idProyectos,String titulo,Usuarios responsable,Date fechaDeInicio,String status, boolean progreso)
 			};
 			
-			request.setAttribute("listaMaquillajesAMostrar", listaMaquillajes);
+			request.setAttribute("listaProyectosAMostrar", listaDeProyectos);
 			
-			request.getRequestDispatcher("plantilla_maquillajes.jsp").forward(request, response);
+			request.getRequestDispatcher("plantilla_listaProyectos.jsp").forward(request, response);
 		}else{
 			misession.invalidate();
 			response.sendRedirect("login");
 		}
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
 		doGet(request, response);
 	}
 

@@ -4,7 +4,6 @@ package com.modelos;
 import java.util.HashMap;
 import java.util.Map;
 import com.modelos.Proyectos;
-import com.modelos.Usuarios;
 
 public class ListaProyectos {
 	Map<String, Proyectos> losProyectos;

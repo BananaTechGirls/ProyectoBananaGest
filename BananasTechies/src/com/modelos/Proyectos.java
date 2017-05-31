@@ -17,7 +17,7 @@ public class Proyectos {
 
 	
 	public Proyectos(String idProyectos, String titulo, Usuarios responsable,Date fechaDeInicio, Date fechaEstimadaFin, Date fechaDeFin,String status, boolean progreso,Tareas[] tareas, String descripcion, String notas){
-		this.idProyectos=idProyectos;
+		this.idProyectos=""+Math.random();
 		this.titulo=titulo;
 		this.responsable=responsable;
 		this.fechaDeInicio=fechaDeInicio;
@@ -32,7 +32,7 @@ public class Proyectos {
 	}
 
 	public Proyectos(String idProyectos,String titulo,Usuarios responsable,Date fechaDeInicio,String status, boolean progreso){
-		this.idProyectos=idProyectos;
+		this.idProyectos=""+Math.random();
 		this.titulo=titulo;
 		this.responsable=responsable;
 		this.fechaDeInicio=fechaDeInicio;

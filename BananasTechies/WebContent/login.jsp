@@ -29,7 +29,7 @@
 				<div class="alert alert-danger">${mierror}</div>
 			</c:if>
 
-			<form action="home.html" method="post" id="loginForm" novalidate>
+			<form action="login" method="post" id="loginForm" novalidate>
 				<div>
 
 					<label for="email">Email: </label> 

@@ -2,7 +2,7 @@ package com.modelos;
 
 import java.util.Date;
 
-public class Tareas {
+public class Tarea {
 	String idTarea;
 	String titulo;
 	String status;
@@ -13,9 +13,9 @@ public class Tareas {
 	String descripcion;
 	String notas;
 	String prioridad;
-	Usuarios responsable;
+	Usuario responsable;
 	
-	public Tareas(String idTarea, String titulo, String status, boolean activo, Date fechaDeInicio, Date fechaEstimadaFin, Date fechaDeFin, String descripcion, String notas, String prioridad, Usuarios responsable) {
+	public Tarea(String idTarea, String titulo, String status, boolean activo, Date fechaDeInicio, Date fechaEstimadaFin, Date fechaDeFin, String descripcion, String notas, String prioridad, Usuario responsable) {
 		this.idTarea=""+Math.random();
 		this.titulo=titulo;
 		this.status=status;

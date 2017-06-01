@@ -33,7 +33,7 @@
 				<div>
 
 					<label for="email">Email: </label> 
-					<input type="email" name="Email" id="email" placeholder="email@ejemplo.com" required>
+					<input type="email" name="email" id="email" placeholder="email@ejemplo.com" value="ricardo@r.es" required>
 					<div class="mensajes_error">
 						<div id="email[valueMissing]" class="${errorclass}">Introduzca
 							sus datos.</div>
@@ -43,8 +43,8 @@
 				</div>
 				<div>
 					<label for="pass">Password: </label> 
-					<input type="password" name="Password" id="pass" placeholder="password" minlength="6"
-						pattern="[a-z 0-9]*" required>
+					<input type="password" name="pass" id="pass" placeholder="password" minlength="6"
+						pattern="[a-z 0-9]*" value="ricardo" required>
 					<div class="mensajes_error">
 						<div id="pass[valueMissing]" class="${errorclass}">Introduzca
 							sus datos.</div>

@@ -34,6 +34,7 @@ public class loginServlet extends HttpServlet {
 		if( email.equals("ricardo@r.es") && password.equals("ricardo") ){
 			HttpSession misession= (HttpSession)request.getSession();
 			misession.setAttribute("userId", "ricardo@r.es");
+			
 			request.getRequestDispatcher("/ListaProyectos").forward(request, response);
 			//Cookie loginCookie = new Cookie("userId", "ricardo@r.es");
 			//response.addCookie(loginCookie);

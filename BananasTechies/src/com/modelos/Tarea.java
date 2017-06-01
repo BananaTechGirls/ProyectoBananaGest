@@ -1,23 +1,26 @@
 package com.modelos;
 
 import java.util.Date;
-import com.modelos.Proyecto;;
 
-public class Tarea extends Proyecto {
+
+import com.modelos.Proyecto;
+
+
+public class Tarea {
 	private int idTarea;
 	private String tituloT;
 	private Proyecto titulo;
 	private String progresoT ;
-	private boolean statusT;
+	private String statusT;
 	private Date fechaDeInicioT;
 	private Date fechaEstimadaFinT;
 	private Date fechaDeFinT;
 	private String descripcionT;
 	private String notasT;
-	private Usuario responsableT;
+	private Usuario responsable;
 	
 	//para el detalle de la tarea
-	public Tarea(int idTarea, String tituloT,String progresoT, boolean statusT, Date fechaDeInicioT, Date fechaEstimadaFinT, Date fechaDeFinT, String descripcionT, String notasT) {
+	public Tarea(int idTarea, String tituloT,String progresoT, String statusT, Date fechaDeInicioT, Date fechaEstimadaFinT, Date fechaDeFinT, String descripcionT, String notasT, Usuario responsable) {
 		this.idTarea=idTarea;
 		this.tituloT=tituloT;
 		this.statusT=statusT;
@@ -27,23 +30,27 @@ public class Tarea extends Proyecto {
 		this.fechaDeFinT=fechaDeFinT;
 		this.descripcionT=descripcionT;
 		this.notasT=notasT;
+		this.responsable=responsable;
 		
 		
 	}
 	
-	public Tarea(){
-		
-	};
+	
+	
+	
 	//para la lista de tareas
-	public Tarea(int idTarea, String tituloT,String progresoT, boolean statusT, Date fechaDeInicioT, String descripcionT) {
+	public Tarea(int idTarea, String tituloT,String progresoT, String statusT, Date fechaDeInicioT, String descripcionT, Usuario responsable) {
 		this.idTarea=idTarea;
 		this.tituloT=tituloT;
 		this.statusT=statusT;
 		this.progresoT=progresoT;
 		this.fechaDeInicioT=fechaDeInicioT;
 		this.descripcionT=descripcionT;
+		this.responsable=responsable;
 		
 	}
+	
+
 	
 	
 	//setters y getters
@@ -72,13 +79,10 @@ public class Tarea extends Proyecto {
 		this.progresoT = progresoT;
 	}
 
-	public boolean isStatusT() {
+	public String isStatusT() {
 		return statusT;
 	}
 
-	public void setStatusT(boolean statusT) {
-		this.statusT = statusT;
-	}
 
 	public Date getFechaDeInicioT() {
 		return fechaDeInicioT;
@@ -120,13 +124,7 @@ public class Tarea extends Proyecto {
 		this.notasT = notasT;
 	}
 
-	public Usuario getResponsableT() {
-		return responsableT;
-	}
-
-	public void setResponsableT(Usuario responsableT) {
-		this.responsableT = responsableT;
-	}
+	
 
 	public Proyecto getTitulo() {
 		return titulo;
@@ -134,6 +132,14 @@ public class Tarea extends Proyecto {
 
 	public void setTitulo(Proyecto titulo) {
 		this.titulo = titulo;
+	}
+
+	public Usuario getResponsable() {
+		return responsable;
+	}
+
+	public void setResponsable(Usuario responsable) {
+		this.responsable = responsable;
 	}
 
 }

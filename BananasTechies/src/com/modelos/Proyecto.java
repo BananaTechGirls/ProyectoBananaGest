@@ -39,6 +39,11 @@ public class Proyecto {
 		this.status = status;
 		this.progreso = progreso;
 	}
+	
+	public Proyecto(String titulo,Usuario responsable){
+		this.titulo = titulo;
+		this.responsable = responsable;
+	}
 
 	// getters y setters
 

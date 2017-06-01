@@ -10,26 +10,25 @@ public class Usuario {
 	private String email;
 	private String pass;
 	private List<Proyecto> proyectoAsignado;
-	private List<Tarea> tareasAsignados;
+	private List<Tarea> tareaAsignada;
 	
 	public Usuario(){
 		
 	}
 	
-	public Usuario(int userId, String nombre, String apellido, String email, String pass, List<Proyecto> proyectoAsignado, List<Tarea> tareasAsignados) {
-		this.setUserId(userId);
+	public Usuario(int userId, String nombre, String apellido, String email, String pass, List<Proyecto> proyectoAsignado, List<Tarea>tareaAsignada) {
+		this.userId=userId;
 		this.nombre=nombre;
 		this.apellido=apellido;
 		this.email=email;
 		this.pass = pass;
-		
 		this.proyectoAsignado = proyectoAsignado;
-		this.tareasAsignados = tareasAsignados;
+		this.tareaAsignada=tareaAsignada;
 		
 	}
 
 	public Usuario(int userId, String nombre, String apellido) {
-		this.setUserId(userId);
+		this.userId=userId;
 		this.nombre=nombre;
 		this.apellido=apellido;
 			
@@ -81,12 +80,12 @@ public class Usuario {
 		this.proyectoAsignado = proyectoAsignado;
 	}
 
-	public List<Tarea> getTareasAsignados() {
-		return tareasAsignados;
+	public List<Tarea> getTareaAsignada() {
+		return tareaAsignada;
 	}
 
-	public void setTareasAsignados(List<Tarea> tareasAsignados) {
-		this.tareasAsignados = tareasAsignados;
+	public void setTareaAsignada(List<Tarea> tareaAsignada) {
+		this.tareaAsignada = tareaAsignada;
 	}
 
 	public int getUserId() {
@@ -96,6 +95,6 @@ public class Usuario {
 	public void setUserId(int userId) {
 		this.userId = userId;
 	}
-	
+
 
 }

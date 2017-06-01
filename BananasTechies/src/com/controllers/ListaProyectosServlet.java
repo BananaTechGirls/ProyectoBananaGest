@@ -30,7 +30,7 @@ public class ListaProyectosServlet extends HttpServlet {
 					new Proyecto(3, "Proyecto 3", new Usuario(1, "Ricardo", "Gere"), parseDate("2017-06-01"), "En progreso", true)
 					
 			};
-			Proyecto[] listaDeProyectosJuana = {
+			/*Proyecto[] listaDeProyectosJuana = {
 					new Proyecto(4, "Proyecto 4", new Usuario(2, "Juana", "Arco"), parseDate("2017-07-01"), "En Progreso", true),
 					new Proyecto(5, "Proyecto 5", new Usuario(2, "Juana", "Arco"), parseDate("2017-10-17"), "Pendiente hacer", false),
 					new Proyecto(6, "Proyecto 6", new Usuario(2, "Juana", "Arco"), parseDate("2017-03-01"), "Pendiente hacer", false)
@@ -41,11 +41,16 @@ public class ListaProyectosServlet extends HttpServlet {
 					new Proyecto(8, "Proyecto 8", new Usuario(3, "Luis", "Fonzi"), parseDate("2017-02-17"), "En Progreso", true),
 					new Proyecto(9, "Proyecto 9", new Usuario(3, "Luis", "Fonzi"), parseDate("2017-08-01"), "En Progreso", true)
 					
-			};
-			
-			request.setAttribute("listaProyectosAMostrar", listaDeProyectosRicardo);
-			request.setAttribute("listaProyectosAMostrar", listaDeProyectosJuana);
-			request.setAttribute("listaProyectosAMostrar", listaDeProyectosLuis);
+			};*/
+			if(misession.getAttribute("userId")=="1"){
+				request.setAttribute("listaProyectosAMostrar", listaDeProyectosRicardo);
+			}
+			/*if(misession.getAttribute("userId")=="2"){
+				request.setAttribute("listaProyectosAMostrar", listaDeProyectosJuana);
+			}
+			if(misession.getAttribute("userId")=="3"){
+				request.setAttribute("listaProyectosAMostrar", listaDeProyectosLuis);
+			}*/
 			
 			request.getRequestDispatcher("plantilla_listaProyectos.jsp").forward(request, response);
 		}else{

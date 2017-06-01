@@ -31,68 +31,26 @@ public class loginServlet extends HttpServlet {
 		String email = request.getParameter("email");
 		String password = request.getParameter("pass");
 				
-		if( email.equals("ricardo@r.es") && password.equals("ricardo") ){
+		if( email.equals("ricardo@r.es") && password.equals("ricardogere") ){
 			HttpSession misession= (HttpSession)request.getSession();
 			misession.setAttribute("userId", "ricardo@r.es");
-			
 			request.getRequestDispatcher("/ListaProyectos").forward(request, response);
-			//Cookie loginCookie = new Cookie("userId", "ricardo@r.es");
-			//response.addCookie(loginCookie);
-			//response.sendRedirect("plantilla_listaProyectos.jsp");
-			
-		}else{
-			request.setAttribute("mierror", "Email y contraseña erroneos");
-			doGet(request, response);
-			RequestDispatcher rd = getServletContext().getRequestDispatcher("/login");
-			rd.include(request, response);
-		}
-		
-		/*if( email.equals("juana@j.es") && password.equals("juana") ){
+		}else if( email.equals("juana@j.es") && password.equals("juanaarco") ){
 			HttpSession misession= (HttpSession)request.getSession();
 			misession.setAttribute("userId", "juana@j.es");
 			request.getRequestDispatcher("/ListaProyectoss").forward(request, response);
-			//Cookie loginCookie = new Cookie("userId", "juana@j.es");
-			//response.addCookie(loginCookie);
-			//response.sendRedirect("LoginSuccess.jsp");
-		}else{
-			request.setAttribute("mierror", "Email y contraseña erroneos");
-			doGet(request, response);
-			RequestDispatcher rd = getServletContext().getRequestDispatcher("/login");
-			rd.include(request, response);
-		}
-		
-		if( email.equals("luis@l.es") && password.equals("luis") ){
+		}else if( email.equals("luis@l.es") && password.equals("luisfonzi") ){
 			HttpSession misession= (HttpSession)request.getSession();
 			misession.setAttribute("userId", "luis@l.es");
 			request.getRequestDispatcher("/ListaProyectos").forward(request, response);
-			//Cookie loginCookie = new Cookie("userId", "luis@l.es");
-			//response.addCookie(loginCookie);
-			//response.sendRedirect("LoginSuccess.jsp");
+			
 		}else{
 			request.setAttribute("mierror", "Email y contraseña erroneos");
 			doGet(request, response);
 			RequestDispatcher rd = getServletContext().getRequestDispatcher("/login");
 			rd.include(request, response);
 		}
-		*/
 
-		
-		
-		//Cookie [] cookies = request.getCookies();
-
-		//for(int i=0; i<cookies.length; i++)
-		//{
-		    //Cookie cookieActual = cookies[i];
-
-		    //String identificador = cookieActual.getName();
-		   // String valor = cookieActual.getValue();
-
-		   // if(identificador.equals("userId")){
-		    // tratamiento específico para ese usuario, como por ejemplo mostrar una web
-		    // personalizada con los últimos artículos que estuvo consultando.
-		   // }
-		//}
-		
 	}
 
 }

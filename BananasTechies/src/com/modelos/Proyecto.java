@@ -9,14 +9,14 @@ public class Proyecto {
 	private Date fechaDeInicio;
 	private Date fechaEstimadaFin;
 	private Date fechaDeFin;
-	private boolean status;
+	private String status;
 	private String progreso;
 	private Tarea[] tareas;
 	private String descripcion;
 	private String notas;
 
 	public Proyecto(int idProyecto, String titulo, Usuario responsable, Date fechaDeInicio, Date fechaEstimadaFin,
-			Date fechaDeFin, boolean status, String progreso, Tarea[] tareas, String descripcion, String notas) {
+			Date fechaDeFin, String status, String progreso, Tarea[] tareas, String descripcion, String notas) {
 		this.idProyecto = idProyecto;
 		this.titulo = titulo;
 		this.responsable = responsable;
@@ -31,7 +31,7 @@ public class Proyecto {
 
 	}
 
-	public Proyecto(int idProyecto, String titulo, Usuario responsable, Date fechaDeInicio, String progreso,boolean status) {
+	public Proyecto(int idProyecto, String titulo, Usuario responsable, Date fechaDeInicio, String progreso,String status) {
 		this.idProyecto = idProyecto;
 		this.titulo = titulo;
 		this.responsable = responsable;
@@ -45,6 +45,7 @@ public class Proyecto {
 		this.responsable = responsable;
 	}
 
+	
 	// getters y setters
 
 	
@@ -97,15 +98,15 @@ public class Proyecto {
 		this.fechaDeFin = fechaDeFin;
 	}
 
-	public boolean getStatus() {
+	public String getStatus() {
 		return status;
 	}
 
-	public void setStatus(boolean status) {
+	public void setStatus(String status) {
 		this.status = status;
 	}
 
-	public String isProgreso() {
+	public String getProgreso() {
 		return progreso;
 	}
 

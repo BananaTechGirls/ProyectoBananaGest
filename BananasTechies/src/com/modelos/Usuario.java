@@ -27,8 +27,7 @@ public class Usuario {
 		
 	}
 
-	public Usuario(int userId, String nombre, String apellido) {
-		this.userId=userId;
+	public Usuario(String nombre, String apellido) {
 		this.nombre=nombre;
 		this.apellido=apellido;
 			

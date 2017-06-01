@@ -51,24 +51,23 @@
 			<div class="container-fluid">
 				<ul class="row">
 					<c:forEach var="pro" items="${listaProyectosAMostrar}" varStatus="counter">
-						<li class="box1 linkBox col-xs-12 col-sm-7" id="${idProyecto}">
-							<a href="project.html" aria-label="proyecto1">
+						<li class="box1 linkBox col-xs-12 col-sm-7" id="${pro.idProyecto}">
+							<a href="DetalleProyectoServlet?idp=${pro.idProyecto}" aria-label="proyecto1">
 								<ul class="infoPro col-xs-12 col-sm-7">
-									<li class="col-xs-12"><p>
-											Id del Proyecto: <span>${pro.idProyecto}</span>
-										</p></li>
-									<li class="col-xs-12"><p>
-											Titulo: <span>${pro.titulo}</span>
-										</p></li>
-									<li class="col-xs-12"><p>
-											Fecha de Inicio: <span>${pro.fechaDeInicio}</span>
-										</p></li>
-									<li class="col-xs-12"><p>
-											Asignado a: <span>${pro.responsable}</span>
-										</p></li>
-									<li class="col-xs-12"><p>
-											Progreso: <span>${pro.progreso}</span>
-										</p></li>
+									<li class="col-xs-12">
+										<p>Id del Proyecto: <span>${pro.idProyecto}</span></p></li>
+									<li class="col-xs-12">
+										<p>Titulo: <span>${pro.titulo}</span></p>
+									</li>
+									<li class="col-xs-12">
+										<p>Fecha de Inicio: <span>${pro.fechaDeInicio}</span></p>
+									</li>
+									<li class="col-xs-12">
+										<p>Asignado a: <span>${pro.responsable.nombre}</span></p>
+									</li>
+									<li class="col-xs-12">
+										<p>Progreso: <span>${pro.progreso}</span></p>
+									</li>
 									<li class="col-xs-12"><p>
 											Status: <span>${pro.status}</span>
 										</p>
@@ -78,7 +77,7 @@
 									<div class="buttons">
 										<a href="#"
 										class="btn_del_Project btn glyphicon glyphicon-trash"
-										data_Id="${idProyectos}" aria-label="botonBorrarP"> <span
+										data_Id="${pro.idProyecto}" aria-label="botonBorrarP"> <span
 										class="iconText"> Borrar</span>
 										</a>
 									</div>

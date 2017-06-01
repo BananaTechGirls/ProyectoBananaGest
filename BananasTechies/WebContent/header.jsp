@@ -19,12 +19,17 @@
 			<div class="collapse navbar-collapse submenu" id="myNavbar">
 				<ul class="nav navbar-nav navList navbar-right">
 					<li class="projectListActive"><a class="navItems"
-						href="home.html">Proyectos</a></li>
-					<li><a class="navItems" href="taskList.html">Tareas</a></li>
-					<li id="profileBtn"><a
-						class="navItems glyphicon glyphicon-user" href="profile.html">
+						href="/ListaProyectos">Proyectos</a></li>
+					<li><a class="navItems" href="/ListaTareasServlet">Tareas</a></li>
+					<li id="profileBtn">
+						<a class="navItems glyphicon glyphicon-user" href="profile.html">
 							<span class="profile">Perfil</span>
-					</a></li>
+						</a>
+					</li>
+					<li>
+						<a class="navItems" href="logout">Logout</a>
+					</li>
+					
 				</ul>
 			</div>
 		</div>

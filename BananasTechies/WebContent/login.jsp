@@ -43,8 +43,8 @@
 				</div>
 				<div>
 					<label for="pass">Password: </label> 
-					<input type="password" name="pass" id="pass" placeholder="password" minlength="6"
-						pattern="[a-z 0-9]*" value="ricardogere" required>
+					<input type="password" name="pass" id="pass" placeholder="password" minlength="2"
+						pattern="[a-z 0-9]*" value="ricardo" required>
 					<div class="mensajes_error">
 						<div id="pass[valueMissing]" class="${errorclass}">Introduzca
 							sus datos.</div>

@@ -23,34 +23,34 @@ public class ListaProyectosServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession misession= (HttpSession)request.getSession();
 		
-		if( misession.getAttribute("userId")!=null ){
+		if( misession.getAttribute("sessionUserId")!=null ){
 			
 			
-			if( misession.getAttribute("userId").equals("ricardo@r.es")){
+			if( misession.getAttribute("sessionUserId").equals("Ricardo")){
 				Proyecto[] listaDeProyectosRicardo = {
 					new Proyecto(1, "Proyecto 1", new Usuario("Ricardo", "Gere"), parseDate("2017-06-01"), "En Progreso", "activo"),
 					new Proyecto(2, "Proyecto 2", new Usuario("Ricardo", "Gere"), parseDate("2017-09-17"), "Pendiente hacer", "inactivo"),
 					new Proyecto(3, "Proyecto 3", new Usuario("Ricardo", "Gere"), parseDate("2017-06-01"), "En progreso", "activo")
 				};
 				request.setAttribute("listaProyectosAMostrar", listaDeProyectosRicardo);
-			}else if( misession.getAttribute("userId").equals("juana@j.es")){
+			}
+			if( misession.getAttribute("sessionUserId").equals("Juana")){
 				Proyecto[] listaDeProyectosJuana = {
-					new Proyecto(4, "Proyecto 4", new Usuario( "Juana", "Arco"), parseDate("2017-07-01"), "En Progreso", "activo"),
+					new Proyecto(4, "Proyecto 4", new Usuario("Juana", "Arco"), parseDate("2017-07-01"), "En Progreso", "activo"),
 					new Proyecto(5, "Proyecto 5", new Usuario("Juana", "Arco"), parseDate("2017-10-17"), "Pendiente hacer", "inactivo"),
-					new Proyecto(6, "Proyecto 6", new Usuario( "Juana", "Arco"), parseDate("2017-03-01"), "Pendiente hacer","inactivo")
+					new Proyecto(6, "Proyecto 6", new Usuario("Juana", "Arco"), parseDate("2017-03-01"), "Pendiente hacer","inactivo")
 				};
 				request.setAttribute("listaProyectosAMostrar", listaDeProyectosJuana);
-			}else{
-				if( misession.getAttribute("userId").equals("luis@l.es")){
-					Proyecto[] listaDeProyectosLuis = {
-							new Proyecto(7, "Proyecto 7", new Usuario( "Luis", "Fonzi"), parseDate("2017-11-01"), "Pendiente hacer", "inactivo"),
-							new Proyecto(8, "Proyecto 8", new Usuario( "Luis", "Fonzi"), parseDate("2017-02-17"), "En Progreso","activo"),
-							new Proyecto(9, "Proyecto 9", new Usuario( "Luis", "Fonzi"), parseDate("2017-08-01"), "En Progreso", "activo")
-					
-					};
+			}
+			if( misession.getAttribute("sessionUserId").equals("Luis")){
+				Proyecto[] listaDeProyectosLuis = {
+					new Proyecto(7, "Proyecto 7", new Usuario( "Luis", "Fonzi"), parseDate("2017-11-01"), "Pendiente hacer", "inactivo"),
+					new Proyecto(8, "Proyecto 8", new Usuario( "Luis", "Fonzi"), parseDate("2017-02-17"), "En Progreso","activo"),
+					new Proyecto(9, "Proyecto 9", new Usuario( "Luis", "Fonzi"), parseDate("2017-08-01"), "En Progreso", "activo")
+				};
 					request.setAttribute("listaProyectosAMostrar", listaDeProyectosLuis);
-				}
-			}	
+			}
+		
 			
 			
 

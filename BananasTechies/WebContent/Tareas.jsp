@@ -7,39 +7,14 @@
 <body>
 	<div class="container">
 	
-	
-		<header>
-			<nav class="navbar navbar-default menu">
-				<div class="row">			
-					<a class="navbar-brand" href="home.html">
-						<h1 class="logo">Banana GEST</h1>
-					</a>
-				</div>
-				<div class="row">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle burgerMenu" data-toggle="collapse" data-target="#myNavbar" aria-label="burgerMenu">
-							<span class="icon-bar burgerIcon"></span>
-							<span class="icon-bar burgerIcon"></span>
-							<span class="icon-bar burgerIcon"></span>
-						</button>
-						
-					</div>
-					<div class="collapse navbar-collapse submenu" id="myNavbar">
-						<ul class="nav navbar-nav navList navbar-right">
-							<li><a class="navItems" href="home.html">Proyectos</a></li>
-							<li class="projectListActive"><a class="navItems" href="taskList.html">Tareas</a></li>
-							<li id="profileBtn"><a class="navItems glyphicon glyphicon-user" href="profile.html"><span class="profile">Perfil</span></a></li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-		</header>
+		<jsp:include page="header.jsp"></jsp:include>
+		
 		<section class="container-fluid">
 			<ol class="breadcrumb">
 				<li><a href="home.html">Home</a></li>
 				<li class="active">Lista de Tareas</li>
 			</ol>
-			<h1> Listado de Tareas de <span>${new Usuario}</span></h1>
+			<h1> Listado de Tareas de <span>${userId}</span></h1>
 			<div class="row">
 				<form action="resultsT.html" method="get" id="searchTForm" novalidate>
 					<div class="row">

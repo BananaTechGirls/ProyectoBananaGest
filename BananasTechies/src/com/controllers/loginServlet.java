@@ -19,7 +19,7 @@ public class loginServlet extends HttpServlet {
 			throws ServletException, IOException {
 		HttpSession misession = (HttpSession) request.getSession();
 
-		if (misession.getAttribute("userId") != null) {
+		if (misession.getAttribute("sessionUserId") != null) {
 			request.getRequestDispatcher("/ListaProyectos").forward(request, response);
 		} else {
 			RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
@@ -31,21 +31,21 @@ public class loginServlet extends HttpServlet {
 		String email = request.getParameter("email");
 		String password = request.getParameter("pass");
 				
-		if( email.equals("ricardo@r.es") && password.equals("ricardogere") ){
+		if( email.equals("ricardo@r.es") && password.equals("ricardo") ){
 			HttpSession misession= (HttpSession)request.getSession();
-			misession.setAttribute("userId", "ricardo@r.es");
+			misession.setAttribute("sessionUserId", "Ricardo");
 			request.getRequestDispatcher("/ListaProyectos").forward(request, response);
-		}else if( email.equals("juana@j.es") && password.equals("juanaarco") ){
+		}else if( email.equals("juana@j.es") && password.equals("juana") ){
 			HttpSession misession= (HttpSession)request.getSession();
-			misession.setAttribute("userId", "juana@j.es");
-			request.getRequestDispatcher("/ListaProyectoss").forward(request, response);
-		}else if( email.equals("luis@l.es") && password.equals("luisfonzi") ){
+			misession.setAttribute("sessionUserId", "Juana");
+			request.getRequestDispatcher("/ListaProyectos").forward(request, response);
+		}else if( email.equals("luis@l.es") && password.equals("luis") ){
 			HttpSession misession= (HttpSession)request.getSession();
-			misession.setAttribute("userId", "luis@l.es");
+			misession.setAttribute("sessionUserId", "Luis");
 			request.getRequestDispatcher("/ListaProyectos").forward(request, response);
 			
 		}else{
-			request.setAttribute("mierror", "Email y contraseÃ±a erroneos");
+			request.setAttribute("mierror", "Email y contraseña erroneos");
 			doGet(request, response);
 			RequestDispatcher rd = getServletContext().getRequestDispatcher("/login");
 			rd.include(request, response);

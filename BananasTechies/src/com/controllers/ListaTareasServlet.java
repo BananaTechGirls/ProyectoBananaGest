@@ -23,31 +23,31 @@ public class ListaTareasServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession misession= (HttpSession)request.getSession();
 		
-		if( misession.getAttribute("userId")!=null ){
+		if( misession.getAttribute("sessionUserId")!=null ){
 			
-			if( misession.getAttribute("userId").equals("ricardo@r.es")){
+			if( misession.getAttribute("sessionUserId").equals("ricardo@r.es")){
 			Tarea[] listaDeTareasRicardo = {
-					new	Tarea(1, "Tarea 1","En Progreso","activo", parseDate("2017-06-01"), "Lorem Ipsum es simplemente el texto de relleno de las imprentas",new Usuario (1, "Ricardo", "Gere")),
-					new	Tarea(2, "Tarea 2","En Progreso","inactivo", parseDate("2017-06-01"), "Lorem Ipsum es simplemente el texto de relleno de las imprentas",new Usuario (1, "Ricardo", "Gere")),
-					new	Tarea(3, "Tarea 3","En Progreso", "activo", parseDate("2017-06-01"), "Lorem Ipsum es simplemente el texto de relleno de las imprentas",new Usuario (1, "Ricardo", "Gere"))
+					new	Tarea(1, "Tarea 1","En Progreso","activo", parseDate("2017-06-01"), "Lorem Ipsum es simplemente el texto de relleno de las imprentas",new Usuario ( "Ricardo", "Gere")),
+					new	Tarea(2, "Tarea 2","En Progreso","inactivo", parseDate("2017-06-01"), "Lorem Ipsum es simplemente el texto de relleno de las imprentas",new Usuario ( "Ricardo", "Gere")),
+					new	Tarea(3, "Tarea 3","En Progreso", "activo", parseDate("2017-06-01"), "Lorem Ipsum es simplemente el texto de relleno de las imprentas",new Usuario ( "Ricardo", "Gere"))
 				};
 				request.setAttribute("listaTareasAMostrar", listaDeTareasRicardo);
 			}
-			else if( misession.getAttribute("userId").equals("juana@j.es")){
+			else if( misession.getAttribute("sessionUserId").equals("juana@j.es")){
 			Tarea[] listaDeTareasJuana = {	
-					new	Tarea(4, "Tarea 4","En Progreso", "activo", parseDate("2017-06-01"), "Lorem Ipsum es simplemente el texto de relleno de las imprentas",new Usuario(2, "Juana", "Arco")),
-					new	Tarea(5, "Tarea 5","En Progreso", "inactivo", parseDate("2017-06-01"), "Lorem Ipsum es simplemente el texto de relleno de las imprentas",new Usuario(2, "Juana", "Arco")),
-					new	Tarea(6, "Tarea 6","En Progreso", "activo", parseDate("2017-06-01"), "Lorem Ipsum es simplemente el texto de relleno de las imprentas",new Usuario(2, "Juana", "Arco")),
+					new	Tarea(4, "Tarea 4","En Progreso", "activo", parseDate("2017-06-01"), "Lorem Ipsum es simplemente el texto de relleno de las imprentas",new Usuario( "Juana", "Arco")),
+					new	Tarea(5, "Tarea 5","En Progreso", "inactivo", parseDate("2017-06-01"), "Lorem Ipsum es simplemente el texto de relleno de las imprentas",new Usuario( "Juana", "Arco")),
+					new	Tarea(6, "Tarea 6","En Progreso", "activo", parseDate("2017-06-01"), "Lorem Ipsum es simplemente el texto de relleno de las imprentas",new Usuario( "Juana", "Arco")),
 				};	
 				request.setAttribute("listaTareasAMostrar", listaDeTareasJuana);
 			}
 			
 			
-			else if( misession.getAttribute("userId").equals("luis@l.es")){
+			else if( misession.getAttribute("sessionUserId").equals("luis@l.es")){
 			Tarea[] listaDeTareasLuis = {	
-					new	Tarea(7, "Tarea 7","En Progreso", "activo", parseDate("2017-06-01"), "Lorem Ipsum es simplemente el texto de relleno de las imprentas",new Usuario(3, "Luis", "Fonzi")),
-					new	Tarea(8, "Tarea 8","En Progreso", "inactivo", parseDate("2017-06-01"), "Lorem Ipsum es simplemente el texto de relleno de las imprentas",new Usuario(3, "Luis", "Fonzi")),
-					new	Tarea(9, "Tarea 9","En Progreso", "activo", parseDate("2017-06-01"), "Lorem Ipsum es simplemente el texto de relleno de las imprentas",new Usuario(3, "Luis", "Fonzi")),
+					new	Tarea(7, "Tarea 7","En Progreso", "activo", parseDate("2017-06-01"), "Lorem Ipsum es simplemente el texto de relleno de las imprentas",new Usuario( "Luis", "Fonzi")),
+					new	Tarea(8, "Tarea 8","En Progreso", "inactivo", parseDate("2017-06-01"), "Lorem Ipsum es simplemente el texto de relleno de las imprentas",new Usuario( "Luis", "Fonzi")),
+					new	Tarea(9, "Tarea 9","En Progreso", "activo", parseDate("2017-06-01"), "Lorem Ipsum es simplemente el texto de relleno de las imprentas",new Usuario( "Luis", "Fonzi")),
 				
 				};	
 				request.setAttribute("listaTareasAMostrar", listaDeTareasLuis);

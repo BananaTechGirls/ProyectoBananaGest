@@ -13,7 +13,7 @@
 				<li class="active">Home</li>
 			</ol>
 			<h1>
-				Listado de proyectos de <span> ${userId}</span>
+				Listado de proyectos de <span> ${sessionUserId}</span>
 			</h1>
 			<div class="row">
 				<form action="resultsP.html" method="post" id="searchPForm"
@@ -82,7 +82,7 @@
 										</a>
 									</div>
 									<div class="buttons">
-										<a href="project.html" class="btn glyphicon glyphicon-eye-open"
+										<a href="DetalleProyectoServlet" class="btn glyphicon glyphicon-eye-open"
 										aria-label="Tareas"> <span class="iconText"> Ver</span>
 										</a>
 									</div>
